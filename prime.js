@@ -1,13 +1,19 @@
 function primeCheck(num){
-    for(var i = 2; i < num; i++){
-        if(num % i === 0){
-            console.log("Not Prime")
-            break;
-        }
-        if(i === num-1){
-            console.log("prime")
+    if(num <= 1){
+        console.log("Not Prime")
+    }else if(num === 2){
+        console.log("Prime")
+    }else{
+        for(var i = 2; i < num; i++){
+            if(num % i === 0){
+                console.log("Not Prime")
+                break;
+            }
+            if(i === num-1){
+                console.log("Prime")
+            }
         }
     }
 }
 
-primeCheck(131071)
+primeCheck(5)
